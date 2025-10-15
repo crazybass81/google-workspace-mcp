@@ -38,11 +38,20 @@
 ### Step 1: Clone and Setup
 
 ```bash
-cd ~/google-workspace-mcp
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/google-workspace-mcp.git
+cd google-workspace-mcp
+
+# Create virtual environment
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
 pip install -e .
+
+# Create config directory
+mkdir -p config
 ```
 
 ### Step 2: Google Cloud Console Setup
@@ -73,7 +82,8 @@ pip install -e .
    - Go to "Credentials" > "Create Credentials" > "OAuth client ID"
    - Choose "Desktop app" as application type
    - Download credentials JSON file
-   - Save as `~/.config/gw-mcp/credentials.json`
+   - Copy `config/credentials.json.example` to `config/credentials.json`
+   - Replace the example values with your downloaded credentials
 
 ### Step 3: Initial Authentication
 
@@ -94,14 +104,16 @@ Add to your Claude Code MCP settings (`~/.claude/config/settings.json`):
 {
   "mcpServers": {
     "google-workspace": {
-      "command": "python3",
-      "args": ["-m", "src.server"],
-      "cwd": "/Users/YOUR_USERNAME/google-workspace-mcp",
+      "command": "/usr/local/bin/python3",
+      "args": ["-m", "google_workspace_mcp"],
+      "cwd": "/path/to/your/google-workspace-mcp",
       "env": {}
     }
   }
 }
 ```
+
+**Note**: Replace `/path/to/your/google-workspace-mcp` with your actual installation path.
 
 ## Available Tools
 
