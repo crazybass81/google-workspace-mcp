@@ -1,36 +1,11 @@
-from setuptools import setup, find_packages
+"""
+Google Workspace MCP Server setup file.
 
-setup(
-    name="google-workspace-mcp",
-    version="1.0.0",
-    packages=find_packages(),
-    install_requires=[
-        "google-api-python-client==2.184.0",
-        "google-auth-httplib2==0.2.0",
-        "google-auth-oauthlib==1.2.2",
-        "google-auth==2.41.1",
-        "google-api-core==2.26.0",
-        "mcp==1.17.0",
-        "aiohttp==3.12.15",
-        "pydantic==2.11.4",
-        "python-dotenv==1.1.0",
-        "cryptography==46.0.2",
-        "cachetools==5.5.2",
-    ],
-    python_requires=">=3.8",
-    author="crazybass81",
-    description="Google Workspace MCP Server for Claude Code",
-    long_description=open("README.md").read(),
-    long_description_content_type="text/markdown",
-    url="https://github.com/crazybass81/google-workspace-mcp",
-    classifiers=[
-        "Development Status :: 4 - Beta",
-        "Intended Audience :: Developers",
-        "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
-        "Programming Language :: Python :: 3.11",
-    ],
-)
+This file is maintained for backward compatibility.
+Primary configuration is in pyproject.toml.
+"""
+
+from setuptools import setup
+
+# Use pyproject.toml for configuration
+setup()
