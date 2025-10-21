@@ -47,9 +47,6 @@ Issues = "https://github.com/crazybass81/google-workspace-mcp/issues"
 [project.scripts]
 google-workspace-mcp = "google_workspace_mcp.__main__:main"
 
-[tool.setuptools]
-packages = {find = {}}
-
 [tool.setuptools.packages.find]
 include = ["google_workspace_mcp*"]
 exclude = ["tests*"]
