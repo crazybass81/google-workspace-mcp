@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 authors = [
-    {name = "crazybass81", email = ""}
+    {name = "crazybass81"}
 ]
 keywords = ["mcp", "google-workspace", "google-drive", "google-docs", "claude", "ai"]
 classifiers = [
