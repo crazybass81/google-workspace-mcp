@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Main MCP server implementation for Google Workspace integration."""
 
 import asyncio
