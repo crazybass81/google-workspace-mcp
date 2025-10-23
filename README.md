@@ -219,7 +219,7 @@ Default limits:
 rm ~/.config/gw-mcp/token.pickle
 
 # Re-authenticate
-python3 -m src.server
+python3 -m google_workspace_mcp
 ```
 
 ### Permission Errors
