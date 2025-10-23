@@ -19,13 +19,10 @@ All tools follow MCP best practices with:
 
 from mcp.server.fastmcp import FastMCP
 
-# Import all tool modules (these will register their tools with mcp)
-from . import tools
-
 # Initialize FastMCP server
 mcp = FastMCP("google_workspace_mcp")
 
+# NOTE: Tool modules are imported in __main__.py to avoid circular imports
+# Each tool module imports this mcp instance and uses @mcp.tool() decorators
 
-# Tool modules will use @mcp.tool() decorators to register themselves
-# This is imported after mcp initialization so tools can register
 __all__ = ['mcp']
