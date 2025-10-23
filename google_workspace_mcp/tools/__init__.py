@@ -1,28 +1,25 @@
-"""MCP tools for Google Workspace services."""
+"""MCP tools for Google Workspace services.
 
-from .drive_tools import DRIVE_TOOLS, handle_drive_tool
-from .docs_tools import DOCS_TOOLS, handle_docs_tool
-from .sheets_tools import SHEETS_TOOLS, handle_sheets_tool
-from .slides_tools import SLIDES_TOOLS, handle_slides_tool
-from .forms_tools import FORMS_TOOLS, handle_forms_tool
-from .gmail_tools import GMAIL_TOOLS, handle_gmail_tool
+Tools are automatically registered with FastMCP when imported.
+Each tool module uses @mcp.tool() decorators for registration.
+"""
 
-# Collect all tools
-ALL_TOOLS = (
-    DRIVE_TOOLS +
-    DOCS_TOOLS +
-    SHEETS_TOOLS +
-    SLIDES_TOOLS +
-    FORMS_TOOLS +
-    GMAIL_TOOLS
-)
+# Import all tool modules to register their tools with FastMCP
+# The @mcp.tool() decorators in each module handle registration
+from . import drive_tools  # noqa: F401
+
+# TODO: Import remaining tool modules after refactoring:
+# from . import docs_tools  # noqa: F401
+# from . import sheets_tools  # noqa: F401
+# from . import slides_tools  # noqa: F401
+# from . import gmail_tools  # noqa: F401
+# from . import forms_tools  # noqa: F401
 
 __all__ = [
-    'ALL_TOOLS',
-    'DRIVE_TOOLS', 'handle_drive_tool',
-    'DOCS_TOOLS', 'handle_docs_tool',
-    'SHEETS_TOOLS', 'handle_sheets_tool',
-    'SLIDES_TOOLS', 'handle_slides_tool',
-    'FORMS_TOOLS', 'handle_forms_tool',
-    'GMAIL_TOOLS', 'handle_gmail_tool'
+    'drive_tools',
+    # 'docs_tools',
+    # 'sheets_tools',
+    # 'slides_tools',
+    # 'gmail_tools',
+    # 'forms_tools',
 ]

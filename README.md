@@ -89,7 +89,7 @@ mkdir -p config
 
 ```bash
 # Run server for first-time authentication
-python3 -m src.server
+python3 -m google_workspace_mcp
 
 # Browser will open for OAuth consent
 # Grant necessary permissions

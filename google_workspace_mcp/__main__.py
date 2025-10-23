@@ -1,12 +1,16 @@
 """Entry point for running the Google Workspace MCP server as a module."""
 
 import asyncio
-from google_workspace_mcp.server import main as server_main
+from google_workspace_mcp.server_fastmcp import mcp
 
 
 def main():
     """Entry point for console script."""
-    asyncio.run(server_main())
+    # Import all tool modules to register their tools
+    from google_workspace_mcp import tools  # noqa: F401
+
+    # Run the FastMCP server
+    mcp.run()
 
 
 if __name__ == "__main__":

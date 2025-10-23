@@ -2,11 +2,8 @@
   "mcpServers": {
     "google-workspace": {
       "command": "/usr/local/bin/python3",
-      "args": ["-m", "src.server"],
-      "cwd": "/Users/t/google-workspace-mcp",
-      "env": {
-        "PYTHONPATH": "/Users/t/google-workspace-mcp"
-      }
+      "args": ["-m", "google_workspace_mcp"],
+      "cwd": "/Users/t/google-workspace-mcp"
     }
   }
 }
