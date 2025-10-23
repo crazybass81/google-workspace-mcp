@@ -133,3 +133,23 @@ class MessageIdInput(BaseMCPInput):
         if not v.strip():
             raise ValueError("Message ID cannot be empty")
         return v.strip()
+
+
+class FormIdInput(BaseMCPInput):
+    """Base model for Google Forms operations."""
+
+    form_id: str = Field(
+        ...,
+        description="Google Forms form ID (e.g., '1A2B3C4D5E6F7G8H9I0J')",
+        min_length=1,
+        max_length=200,
+        pattern=r'^[a-zA-Z0-9_-]+$'
+    )
+
+    @field_validator('form_id')
+    @classmethod
+    def validate_form_id(cls, v: str) -> str:
+        """Validate form ID format."""
+        if not v.strip():
+            raise ValueError("Form ID cannot be empty")
+        return v.strip()
